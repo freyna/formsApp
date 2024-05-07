@@ -1,19 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterPageComponent } from './Pages/registerPage/registerPage/registerPage.component';
+import { RegisterPageComponent } from './Pages/registerPage/registerPage.component';
 
-const routes: Routes = 
-[
+const routes: Routes = [
   {
     path: '',
-    children: 
-    [
-      {
-        path:'sign-up',component: RegisterPageComponent
-      },
-      {
-        path: '**', redirectTo: 'sign-up'
-      }
+    children: [
+      { path: 'sign-up', component: RegisterPageComponent },
+      { path: '**', redirectTo: 'sign-up' },
     ]
   }
 ];
